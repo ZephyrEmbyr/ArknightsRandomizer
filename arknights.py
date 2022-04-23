@@ -10,16 +10,17 @@ import random
 
 # sort operator list by level.
 # option in format [A, B, C]
-# A: number of ops. Check your friend display to see how many you have
+# A: number of ops. Check your friend display to see how many you have.
 # B: weighting. Rolls n random indices within [1, numOps] and selects the lowest number.
 	# Also, weighting < 1 is dumb. If you set weighting < 1 I hate you and you will never pull another 6*.
 # C: pageSize. Number of operators on a page when in the multi-select screen for squad comp.
 
 CIRNOBYL = [180, 1, 16]
 GANYULESS = [74, 1, 16]
-ZEPHYR = [185, 1, 16]
+SYO = [167, 1, 16] 
+ZEPHYR = [185, 1, 12]
 
-SETTINGS = ZEPHYR
+SETTINGS = CIRNOBYL
 
 
 def randomize():
@@ -61,6 +62,7 @@ def paginate(ops):
 		opsOnPage.append((op-1)%(pageSize)+1)
 	if opsOnPage:
 		print("Page", page, "no.", opsOnPage)
+
 
 def main():
 	ops = randomize()
